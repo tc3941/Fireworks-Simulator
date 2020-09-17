@@ -1,1 +1,31 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Project 1</title>
+	<style>canvas{ border: 1px solid black; }</style>
+    <script src="src/tcLIB.js"></script>
+	<script src="src/index.js"></script>
+	<script src="src/firework.js"></script>
+</head>
+<body>
+<canvas id="canvas"></canvas>
+<section id="controls">
+    <label>firework mode: 
+      <select id="fireworkMode">
+          <option value="click" selected>click</option>
+          <option value="random">random</option>
+          <option value="trail">trail(WIP)</option>
+      </select>
+      <select id="randomInterval">
+          <option value=.5>.5</option>
+          <option value=1 selected>1</option>
+          <option value=2>2</option>
+          <option value=3>3</option>
+      </select>
+  </label>
+  <button id="randomButton">Start!</button>
+  <button id="clearButton">Clear!</button>
+  </section>
+</body>
+</html>
