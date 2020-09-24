@@ -2,30 +2,59 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
-	<title>Project 1</title>
-	<style>canvas{ border: 1px solid black; }</style>
+    <title>Project 1</title>
+    <link rel="stylesheet" href="styles/default-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap" rel="stylesheet">
+	<style>canvas{ border: 1px solid white; }</style>
     <script src="src/tcLIB.js"></script>
 	<script src="src/index.js"></script>
 	<script src="src/firework.js"></script>
 </head>
 <body>
-<canvas id="canvas"></canvas>
-<section id="controls">
-    <label>firework mode: 
+    <div>
+    <canvas id="topCanvas"></canvas>
+    <canvas id="canvas"></canvas>
+</div>
+    <section id="controls">
+    <label>Firework Mode: 
       <select id="fireworkMode">
           <option value="click" selected>click</option>
           <option value="random">random</option>
-          <option value="trail">trail(WIP)</option>
       </select>
-      <select id="randomInterval">
-          <option value=.5>.5</option>
-          <option value=1 selected>1</option>
-          <option value=2>2</option>
-          <option value=3>3</option>
-      </select>
+      Firework Explosion Size: 
+      <select id="fwExpSize">
+        <option value=200 selected>200</option>
+        <option value=300 >300</option>
+        <option value=400 >400</option>
+        <option value=500 >500</option>
+        <option value=600 >600</option>
+    </select>
+    | Firework Lifespan: 
+    <select id="fwLifespan">
+      <option value=3 selected>3</option>
+      <option value=5 >5</option>
+      <option value=7 >7</option>
+      <option value=10 >10</option>
+      <option value=20 >20</option>
+  </select>
+  |
   </label>
-  <button id="randomButton">Start!</button>
   <button id="clearButton">Clear!</button>
-  </section>
+  Firework Trail
+  <input type="checkbox" id="trailBox">
+  Rainbow Trail:
+  <input type="checkbox" id="rainbowBox">
+  <div id="randomInterval">
+      Firework Spawn Interval:
+      <select>
+          <option value=.25>.25s</option>
+          <option value=.5>.5s</option>
+          <option value=1 selected>1s</option>
+          <option value=2>2s</option>
+          <option value=3>3s</option>
+        </select>
+        <button id="randomButton">Start!</button>
+    </div>  
+</section>
 </body>
 </html>
