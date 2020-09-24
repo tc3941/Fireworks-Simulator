@@ -9,9 +9,12 @@ background-color: transparent;
     position: absolute;
     background-color: transparent;
 }
-div{
+#canvasDiv{
     position: relative;
     height: 600px;
+}
+div{
+    padding-bottom: 10px;
 }
 body{
     background-color: black;
