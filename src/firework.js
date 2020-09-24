@@ -1,5 +1,7 @@
 class Firework{
-    constructor(targetX = 100,targetY = 100,size = 200,speed=2,duration = 2,color = "white",trail = false, originX = 0,originY = 0){
+    "use strict";
+    constructor(targetX = 100,targetY = 100,size = 200,speed=3
+        ,duration = 2,color = "white",trail = false, originX = 0,originY = targetY){
         this.targetX = targetX;
         this.targetY = targetY;
         this.speed = speed;
@@ -14,7 +16,14 @@ class Firework{
     fwSize = 2;
     n = 0;
     xFactor = 0;
-    yFactor = 0;    
+    yFactor = 0;
+    timer = 0;
+    particles=[];
+    erased= false;
+    colorRandom = tcLIB.getRandomInt(1, 5);
+    trailRainbow = tcLIB.getRandomColor();
+    
+
     getAngle(){
         let dy = (this.targetY - this.trailY);
         let dx = (this.trailX - this.targetX);
@@ -32,8 +41,22 @@ class Firework{
             this.trail = false;
             this.trailX = this.targetX;
             this.trailY = this.targetY;
-            this.n++;
             this.fwSize +=.005;
+            this.n++;
+
         }
+    }
+    increaseTimer(deltaTime){
+        this.timer += deltaTime;
+    }
+    isDead(){
+        return this.timer>this.duration;
+    }
+    addParticle(element){
+        this.particles.push(element);
+    }
+    setToTarget(){
+        this.trailX = this.targetX;
+        this.trailY = this.targetY;
     }
 }

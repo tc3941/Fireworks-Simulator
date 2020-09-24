@@ -1,5 +1,5 @@
 console.log("loaded");
-
+"use strict";
 (function(){
     let tcLIB = {
     getRandomColor() {
