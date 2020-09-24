@@ -1,0 +1,26 @@
+#topCanvas{
+z-index: 2;
+position: absolute;
+background-color: transparent;
+
+}
+#canvas{
+    z-index: 1;
+    position: absolute;
+    background-color: transparent;
+}
+div{
+    position: relative;
+    height: 600px;
+}
+body{
+    background-color: black;
+}
+*{
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+}
+option, select, button{
+    color:black
+}
+
