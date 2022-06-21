@@ -1,3 +1,3 @@
-# 330-project-1-01
-TeddyConyers' Project 1
+# Fireworks Simulator
+TeddyConyers' Fireworks Simulator
 Link: https://people.rit.edu/tc3941/330/Project1/
